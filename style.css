@@ -1,0 +1,139 @@
+li{
+    width:600px;
+    list-style-type: none;
+    padding: 6px 10px;
+cursor: pointer;
+}
+li:hover{
+    background:#EEE;
+    cursor: pointer;
+}
+.animate-show{
+    -webkit-transition:all linear 0.5s;
+    transition:all linear 0.5s;
+    opacity: 1;
+    cursor: pointer;
+}
+.animate-show.ng-hide-add,
+.animate-show.ng-remove{
+    display:inline-block !important;
+}
+.animate-show.ng-hide{
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+//favourite button
+
+ fa-star-o:focus{ 
+  outline: 0 !important;  
+}
+fa-star-o:active  {
+  outline:0;
+  color: yellow
+  
+  
+}
+
+//trash button 
+
+fa-trash-o:focus{ 
+  outline: 0 !important;  
+}
+fa-trash-o:active  {
+  outline:0;
+  color: yellow
+  
+  
+}
+
+
+
+//for icon buttons 
+
+
+body {
+  padding: 3rem 1rem 0;
+  font-family: 'Lato', sans-serif;
+  background: #444;
+}
+
+.presentation {
+  text-align: center;
+  .btn-icon {
+    font-size: 5em;
+    margin: 0 0.5em;
+  }
+}
+
+// Optimize for icon based button
+.btn-icon {
+  padding: 0;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  cursor: pointer;
+  border-radius: 0;
+  &:active, &:focus {
+    .box-shadow(none);
+    border-color: transparent;
+  }
+  &:active {
+    .scale(0.9);
+  }
+  &:focus {
+    outline: 0 none !important;
+  }
+  .glyphicon {
+    .transition(color 0.1s ease);
+  }
+}
+
+// Define color for each button type
+@icon-default-color: #666;
+@icon-star-color: #FECF15;
+@icon-heart-color: #FE4365;
+@icon-bookmark-color: #A6D478;
+
+.btn-icon {
+  .glyphicon-star {
+    color: @icon-default-color;
+    &:hover {
+      color: fadeout(@icon-default-color, 15%);
+    }
+    &.active {
+      color: @icon-star-color;
+      &:hover {
+        color: fadeout(@icon-star-color, 15%);
+      }
+    }
+  }
+  .glyphicon-heart {
+    color: @icon-default-color;
+    &:hover {
+      color: fadeout(@icon-default-color, 15%);
+    }
+    &.active {
+      color: @icon-heart-color;
+      &:hover {
+        color: fadeout(@icon-heart-color, 15%);
+      }
+    }
+  }
+  .glyphicon-bookmark {
+    color: @icon-default-color;
+    &:hover {
+      color: fadeout(@icon-default-color, 10%);
+    }
+    &.active {
+      color: @icon-bookmark-color;
+      &:hover {
+        color: fadeout(@icon-bookmark-color, 10%);
+      }
+    }
+  }
+}
+
+
+

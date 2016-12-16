@@ -1,84 +1,104 @@
-(function,(){
-    var app=angular.module("MyApp",[]);
-)};
+(function() {
+  var app = angular.module('starSystem', []);
 
 
-app.controller="SubmitController",function(){
-    this.details={};
-    this.adddetails=function(signIn){
-        signIn.details.push(this.details);
-        this.details={};
-console.log
-    };
+.controller('ctrl', ['$scope', function($scope) {
+  $scope.item = {
+    star: false,
+    favorite: false,
+    bookmark: false
+  };
+}])
 
-
-
-
-var fa-star-o
-
-
-//for the star
-var acc = document.getElementsByClassName("star.button");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-    acc[i].onclick = function(){
-        this.classList.toggle("active");
-        this.nextElementSibling.classList.toggle("show");
-    }
-}
-window.onload = function() {
- var starList = document.getElementsByClassName('star.button');  
- var numOfStars = starList.length;
- 
- for(var i = 0; i < numOfStars; i++) {
-   star.button[i].addEventListener('click', starClickHandler, false);
- }
-}
-
-function starClickHandler(event) {
-  var star = event.currentTarget;
-
-  setActive(star, false);
-  setActive(star, true);
-  document.getElementById('rateText').textContent = star.getAttribute('data-rate');
-}
-
-function setActive(element, isActive) {
-  if(isActive) {
-    element.classList.add('active');
-    element.nextElementSibling && setActive(element.nextElementSibling, isActive);
-  }
-  else {
-    element.classList.remove('active');
-    element.previousElementSibling && setActive(element.previousElementSibling, isActive);
-  }
-}
-
-    
-    
-    
-    
-   // for the trash bin
-$(document).ready(function() {
-    $('button.table-delete-link').click(function () {
-        var targetUrl = $(this).attr('href');
-        $.ajax({
-            url: targetUrl,
-            type: 'GET',
-            success: function (data, textStatus, xhr) {
-                alert('Item successfully deleted!');
-            },
-            error: function (xhr, textStatus, errorThrown) {
-                var errorMessage = xhr.responseText;
-                errorMessage = errorMessage.substring(errorMessage.indexOf('<title>') + 7, errorMessage.indexOf('</title>'));
-                alert('Unable to delete item: ' + errorMessage);
-            }
+.directive('buttonStar', function() {
+  return {
+    scope: true,
+    restrict: 'E',
+    template: '<button class="btn btn-icon"><span class="glyphicon glyphicon-star" ng-class="{active: item.star}"></span></button>',
+    link: function(scope, elem) {
+      elem.bind('click', function() {
+        scope.$apply(function() {
+          scope.item.star = !scope.item.star;
         });
-        return false;
+      });
+    }
+  };
+})
+
+.directive('buttonFavorite', function() {
+  return {
+    scope: true,
+    restrict: 'E',
+    template: '<button class="btn btn-icon"><span class="glyphicon glyphicon-heart" ng-class="{active: item.favorite}"></span></button>',
+    link: function(scope, elem) {
+      elem.bind('click', function() {
+        scope.$apply(function() {
+          scope.item.favorite = !scope.item.favorite;
+        });
+      });
+    }
+  };
+})
+
+
+    
+var logIn=function(username){
+console.log}
+
+
+var favouriteButton = document.images["favourite"];
+    
+    
+    app.controller("MainCtrl", function($scope){
+        $scope.task=[
+            {name:"Results 1"},
+            {name:"Results 2"},
+            {name:"Results 3"},
+            {name:"Results 4"}
+        ];
+        $scope.hoverIn=function(){
+            this.hoverEdit=true;
+        };
+    $scope.hoverOut=function(){
+        this.hoverEdit=false;
+    };
     });
+
+  function starButton(favourite)
+
+
+
+$(function(){
+  $("h1").animate({
+    "margin-left": "100px"
+  }, "slow");
 });
 
+
+$('input[type="button"]').click(function(e){
+   $(this).closest('tr').remove()
+})
+
     
-    function reviewButton(onclick)
-console.log("reviewForm") 
+    
+"checked"
+if("checkbox"==="checked"){
+   onclick('trashButton')
+    delete HTMLTableRowElement;
+    }
+    
+    function vote () {
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

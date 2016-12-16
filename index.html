@@ -1,197 +1,157 @@
-<!DOCTYPE html>
-<html ng-app="MyApp">
-<head>
-<title>Elliot's App</title>
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-<link rel="stylesheet" href="https://maxcnd.bootstrapcdn.com/bootstrap/3.36/css/bootstrap.min.css">
-    <script src="https://use.fontawesome.com/7430df1300.js"></script> 
-    <script src="app.js"></script>
-    <script src="style.css"></script>
-<style>
-button.accordion {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    transition: 0.4s;
-}
+<DOCTYPE html>
+    <html ng-app="starSystem">
+    <head>
+        <title>Elliot's App</title>
+<meta charset="utf-8"/>
+      <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script> 
+        <script> document.write('<base href="' + document.location +'"/>');</script>
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="https://maxcnd.bootstrapcnd.com/bootstrap/3.36/css/bootstrap.min.css">
+        <script src="https://use.fontawesome.com/7430df1300.js"></script>
+        <link rel="stylesheet" href="style.css"/>
+<script data-require="angular.js@1.2.x" src="http://code.angularjs.org/1.2.12/angular.js" data-semver="1.2.14"></script>
+<script data-require="angular-animate@*" data-semver="1.2.13" src="http://code.angular.js.org/1.2.12/angular-animate.js"></script>
+    </head>
+        <h1>Letter Responses</h1>
+    <body ng-controller="MainController">
+     <style>
+       /*  button.accordion{
+             background-color: #eee;
+             color: #444;
+             cursor: pointer;
+             padding: 18px;
+             width: 100%;
+             border: none;
+             text-align: left;
+             outline: none;
+             font-size: 15px;
+             transition: 0.4s;
+         }
+         
+         button.accordion.active,button.accordion:hover{
+             background-color: #ddd;
+         }
+         
+         button.accordion:after{
+             content: '\2795';
+             font-size: 13px;
+             color: #777;
+             float:middle;
+             margin-left: 5px;
+             
+         }
+         
+         
+         button.accordion.active:after{
+             content:"2796";
+         }
+         
+         <div.pannel{
+             padding: 0 18px;
+             background-color: white;
+             max-height: 0;
+             overflow: hidden;
+             transition: 0.06s ease-in-out;
+             opacity: 0;
+             } 
+         <div.pannel.show{
+             opacity: 1;
+             max-height: 500px;
+         }
+         
+         
+        </style>
 
-  
-button.accordion.active, button.accordion:hover {
-    background-color: #ddd;
-    
-    
-    
-}
-    
-    button.accordion:after{
-        content:'\02795';
-        font-size: 13px;
-        color:#777;
-        float: middle;
-        margin-left: 5px;
-    }
-    
-    
-    button.accordion.active:after{
-        content: "\2796";
-    }
-    
-    
-    
-div.panel {
-    padding: 0 18px;
-    background-color: white;
-    max-height: 0;
-    overflow: hidden;
-    transition: 0.6s ease-in-out;
-    opacity: 0;
-}
 
-div.panel.show {
-    opacity: 1;
-    max-height: 500px;
-}
-    
-    
-    
-</style>
-</head>
-    
-<form action="action_page.php">
-  <div class="container" ng-SumbitController>
-    <label><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+<table>
+   <tr>
+      
+   </tr>
+    <li ng-repeat="task in tasks" ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()">
+           <input name="checkbox"type="checkbox" unchecked="checked"></input>
+            Results 1
+            <div class="button" style="width:200px; float:right; padding-right:200px"> 
+                <i name="favourite" class="fa fa-star-o" aria-hidden="true"></i> 
+                <i name="trash" type="button" class="fa fa-trash-o" aria-hidden="true"></i>
+            </div>
+                </li>
+    <tr>
+     <li ng-repeat="task in tasks" ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()">
+           <input name="checkbox"type="checkbox" unchecked="checked"></input>
+            Results 2
+            <div class="button" style="width:200px; float:right; padding-right:200px"> 
+                <i name="favourite" class="fa fa-star-o" aria-hidden="true"></i>
+                <i name="trash" type="button" class="fa fa-trash-o" aria-hidden="true"></i>
+            </div>
+                </li>
+    </tr>
+    <tr>
+        <li ng-repeat="task in tasks" ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()">
+           <input name="checkbox"type="checkbox" unchecked="checked"></input>
+            Results 3
+            <div class="button" style="width:200px; float:right; padding-right:200px"> 
+                <i name="favourite" class="fa fa-star-o" aria-hidden="true"></i>
+                <i name="trash" type="button" class="fa fa-trash-o" aria-hidden="true"></i>
+            </div>
+                </li>
+    </tr>
+    <tr>
+    <li ng-repeat="task in tasks" ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()">
+           <input name="checkbox"type="checkbox" unchecked="checked"></input>
+            Results 4
+            <div class="rating" style="width:200px; float:right; padding-right:200px"> 
+                <i name="favourite" class="fa fa-star-o" aria-hidden="true"></i> 
+                <i name="trash" type="button" class="fa fa-trash-o" aria-hidden="true"></i>
+            </div>
+                </li>
+    </tr>
+<button name="Remove" class="submit">Remove </button> 
+</table>
+        
+        
 
-    <label><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-
-    <button type="submit">Login</button>
-    <input type="checkbox" checked="checked"> Remember me
+  <div ng-controller="ctrl">
+    <div class="presentation">
+      <button-favorite>heart</button-favorite>
+      <button-star>star</button-star>
+      <button-bookmark>book</button-bookmark>
+    </div>
   </div>
-
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
-  </div>
-</form>    
-    
-    
-    
-    
-    
-<body>
-
-<h2>Results</h2>
-
-<button class="accordion"><input type="checkbox" checked="checked">Results 3 
-<div class="rating" style="width:200px; float:right; padding-right:400px">
-    <span class="rate-star">&bigstar;</span></div>
-    <i class="fa fa-trash-o" aria-hidden="true"></i>
-    <i class="fa fa-star-o" aria-hidden="true"></i>
-</button>
-
-
-
-<div class="panel"> 
-<form name="reviewForm" onSubmit="console.log" (option value) + (input value)>
-    
-<select>
-<option value="1">1 star</option>
-<option value="2">2 stars</option>
-<option value="3">3 stars</option>
-<option value="4">4 stars</option>
-<option value="5">5 stars</option>
-    
-</select>
-
-<select>
-<option value="strategic">Strategic</option>
-<option value="core">Core</option>
-<option value="bigData">Big Data</option>
-<option value="pulse">Pulse</option>
-</select>
-<input type=text class="form-control" placeholder="please leave a few comments"</input>  
-<input type="submit" class="btn btn-primary pull right" value="Submit Review" </input>
-
 </div>
 
-<button class="accordion"><input type="checkbox" checked="checked">Results 2
-<div class="rating" style="width:200px; float:right; padding-right:400px">
-    <span class="rate-star">&bigstar;</span></div>
-    <i class="fa fa-trash-o" aria-hidden="true"></i>
-    <i class="fa fa-star-o" aria-hidden="true"></i>
-</button>
 
 
-<div class="panel">
-  <form name="reviewForm">
-    
-<select>
-<option value="1">1 star</option>
-<option value="2">2 stars</option>
-<option value="3">3 stars</option>
-<option value="4">4 stars</option>
-<option value="5">5 stars</option> 
-</select>
-<select>
-<option value="strategic">Strategic</option>
-<option value="core">Core</option>
-<option value="bigData">Big Data</option>
-<option value="pulse">Pulse</option>
-</select>
-<input type=text class="form-control" placeholder="please leave a few comments"</input>  
-<input type="submit" class="btn btn-primary pull right" value="Submit Review" </input>   
-</form>
-</div>
-
-<button class="accordion"><input type="checkbox" checked="checked">Results 3 
-<div class="rating" style="width:200px; float:right; padding-right:400px">
-    <span class="rate-star">&bigstar;</span></div>
-    <i class="fa fa-trash-o" aria-hidden="true"></i>
-    <i class="fa fa-star-o" aria-hidden="true"></i>
-</button>
+        </body>
+    </html>
 
 
-     
-<div class="panel">
- <form name="reviewForm">
-    
-<select>
-<option value="1">1 star</option>
-<option value="2">2 stars</option>
-<option value="3">3 stars</option>
-<option value="4">4 stars</option>
-<option value="5">5 stars</option> 
-</select>
-<select>
-<option value="strategic">Strategic</option>
-<option value="core">Core</option>
-<option value="bigData">Big Data</option>
-<option value="pulse">Pulse</option>
-</select>
-<input type=text class="form-control" placeholder="please leave a few comments"</input>  
-<input type="submit" class="btn btn-primary pull right" value="Submit Review" </input>   
-</form>
-</div>
 
-<script>
-var acc = document.getElementsByClassName("accordion");
-var i;
 
-for (i = 0; i < acc.length; i++) {
-    acc[i].onclick = function(){
-        this.classList.toggle("active");
-        this.nextElementSibling.classList.toggle("show");
-  }
-}
-</script>
 
-</body>
-</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

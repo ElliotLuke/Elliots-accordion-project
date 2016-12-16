@@ -20,7 +20,6 @@ button.accordion {
     font-size: 15px;
     transition: 0.4s;
 }
-
   
 button.accordion.active, button.accordion:hover {
     background-color: #ddd;
@@ -52,7 +51,6 @@ div.panel {
     transition: 0.6s ease-in-out;
     opacity: 0;
 }
-
 div.panel.show {
     opacity: 1;
     max-height: 500px;
@@ -89,7 +87,69 @@ div.panel.show {
 
 <h2>Results</h2>
 
-<button class="accordion"><input type="checkbox" checked="checked">Results 3 
+<button class="accordion"><input type="checkbox" checked="checked">Results 1
+<div class="rating" style="width:200px; float:right; padding-right:400px">
+    <span class="rate-star">&bigstar;</span></div>
+    <i class="fa fa-trash-o" aria-hidden="true"></i>
+    <i class="fa fa-star-o" aria-hidden="true"></i>
+</button>
+
+
+
+<div class="panel"> 
+<form name="reviewForm" onSubmit="console.log" (option value) + (input value)>
+    
+<select>
+<option value="1">1 star</option>
+<option value="2">2 stars</option>
+<option value="3">3 stars</option>
+<option value="4">4 stars</option>
+<option value="5">5 stars</option>
+    
+</select>
+
+<select>
+<option value="strategic">Strategic</option>
+<option value="core">Core</option>
+<option value="bigData">Big Data</option>
+<option value="pulse">Pulse</option>
+</select>
+<input type=text class="form-control" placeholder="please leave a few comments"</input>  
+<input type="submit" class="btn btn-primary pull right" value="Submit Review" </input>
+
+</div>
+<button class="accordion"><input type="checkbox" checked="checked">Results 2
+<div class="rating" style="width:200px; float:right; padding-right:400px">
+    <span class="rate-star">&bigstar;</span></div>
+    <i class="fa fa-trash-o" aria-hidden="true"></i>
+    <i class="fa fa-star-o" aria-hidden="true"></i>
+</button>
+
+
+
+<div class="panel"> 
+<form name="reviewForm" onSubmit="console.log" (option value) + (input value)>
+    
+<select>
+<option value="1">1 star</option>
+<option value="2">2 stars</option>
+<option value="3">3 stars</option>
+<option value="4">4 stars</option>
+<option value="5">5 stars</option>
+    
+</select>
+
+<select>
+<option value="strategic">Strategic</option>
+<option value="core">Core</option>
+<option value="bigData">Big Data</option>
+<option value="pulse">Pulse</option>
+</select>
+<input type=text class="form-control" placeholder="please leave a few comments"</input>  
+<input type="submit" class="btn btn-primary pull right" value="Submit Review" </input>
+
+</div>
+<button class="accordion"><input type="checkbox" checked="checked">Results 3
 <div class="rating" style="width:200px; float:right; padding-right:400px">
     <span class="rate-star">&bigstar;</span></div>
     <i class="fa fa-trash-o" aria-hidden="true"></i>
@@ -121,69 +181,10 @@ div.panel.show {
 
 </div>
 
-<button class="accordion"><input type="checkbox" checked="checked">Results 2
-<div class="rating" style="width:200px; float:right; padding-right:400px">
-    <span class="rate-star">&bigstar;</span></div>
-    <i class="fa fa-trash-o" aria-hidden="true"></i>
-    <i class="fa fa-star-o" aria-hidden="true"></i>
-</button>
-
-
-<div class="panel">
-  <form name="reviewForm">
-    
-<select>
-<option value="1">1 star</option>
-<option value="2">2 stars</option>
-<option value="3">3 stars</option>
-<option value="4">4 stars</option>
-<option value="5">5 stars</option> 
-</select>
-<select>
-<option value="strategic">Strategic</option>
-<option value="core">Core</option>
-<option value="bigData">Big Data</option>
-<option value="pulse">Pulse</option>
-</select>
-<input type=text class="form-control" placeholder="please leave a few comments"</input>  
-<input type="submit" class="btn btn-primary pull right" value="Submit Review" </input>   
-</form>
-</div>
-
-<button class="accordion"><input type="checkbox" checked="checked">Results 3 
-<div class="rating" style="width:200px; float:right; padding-right:400px">
-    <span class="rate-star">&bigstar;</span></div>
-    <i class="fa fa-trash-o" aria-hidden="true"></i>
-    <i class="fa fa-star-o" aria-hidden="true"></i>
-</button>
-
-
-     
-<div class="panel">
- <form name="reviewForm">
-    
-<select>
-<option value="1">1 star</option>
-<option value="2">2 stars</option>
-<option value="3">3 stars</option>
-<option value="4">4 stars</option>
-<option value="5">5 stars</option> 
-</select>
-<select>
-<option value="strategic">Strategic</option>
-<option value="core">Core</option>
-<option value="bigData">Big Data</option>
-<option value="pulse">Pulse</option>
-</select>
-<input type=text class="form-control" placeholder="please leave a few comments"</input>  
-<input type="submit" class="btn btn-primary pull right" value="Submit Review" </input>   
-</form>
-</div>
 
 <script>
 var acc = document.getElementsByClassName("accordion");
 var i;
-
 for (i = 0; i < acc.length; i++) {
     acc[i].onclick = function(){
         this.classList.toggle("active");
@@ -194,4 +195,3 @@ for (i = 0; i < acc.length; i++) {
 
 </body>
 </html>
-
